@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Bus{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Add a New Bus</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="id_bus_number" class="form-label">Bus Number</label>
+        <input type="text" name="bus_number" id="id_bus_number" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="id_brand" class="form-label">Brand</label>
+        <input type="text" name="brand" id="id_brand" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="id_number_of_seats" class="form-label">Number of Seats</label>
+        <input type="number" name="number_of_seats" id="id_number_of_seats" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="id_trip" class="form-label">Trip</label>
+        <input type="text" name="trip" id="id_trip" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="id_trip_duration" class="form-label">Trip Duration (HH:MM:SS)</label>
+        <input type="text" name="trip_duration" id="id_trip_duration" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="id_conductor" class="form-label">Conductor</label>
+        <input type="text" name="conductor" id="id_conductor" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="id_driver" class="form-label">Driver</label>
+        <input type="text" name="driver" id="id_driver" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Bus</button>
+</form>
+{% endblock %}
